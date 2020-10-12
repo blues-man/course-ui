@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     }
-    if (node.nodeType === 1 && node.nodeName !== 'SCRIPT') {
+    if ((node.nodeType === 1 || node.nodeType === 2) && node.nodeName !== 'SCRIPT') {
       for (var i = 0; i < node.childNodes.length; i++) {
         replaceParamsInNodes(node.childNodes[i], pattern, value)
       }
